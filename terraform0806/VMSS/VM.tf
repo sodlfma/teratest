@@ -181,7 +181,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         
     admin_ssh_key {
         username       = "ds10146"
-        public_key     = /home/ds10146/.ssh/id_rsa.pub.
+        public_key     = file("/home/ds10146/.ssh/id_rsa.pub")
     }
 
     boot_diagnostics {
@@ -192,4 +192,4 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         creator = "10146"
         environment = "Terraform Demo"
     }
-}
+    }
